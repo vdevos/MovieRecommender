@@ -27,7 +27,7 @@ outputFile = None
 failuresFile = None
 while not outputCreated:
     try:
-        # The 'w' means open for exclusive creation, failing if the file already exists.
+        # The 'x' means open for exclusive creation, failing if the file already exists.
         outputFileNameFinal = outputFileName + str(attemptCounter) + outputExtension
         outputFile = open(outputFileNameFinal, 'x')
         if outputFile.writable():
